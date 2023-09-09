@@ -17,8 +17,8 @@ jobs:
           password: ${{ secrets.devops_demo }}
       - name: Build, tag, and push image to DockerHub
         env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-          IMAGE_NAME: my-image
+          DOCKERHUB_USERNAME: ${{ secrets.mightysanjay }}
+          IMAGE_NAME: devops_demo
         run: |
           docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME .
           docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:latest
